@@ -8,9 +8,8 @@
  * If any other changes are made, update the version number to the latest ZNC
  * version to reflect it, please. This makes things easier to know what
  * version it works with; If you want to contribute code, let me know via IRC
- * and I'll ad you as a contributor on GitHub.
+ * and I'll add you as a contributor on GitHub.
  * -Efreak
- * Oh, and by using this software, you agree that your soul is mine.
  */
 
 
