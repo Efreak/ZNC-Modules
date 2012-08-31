@@ -1,9 +1,15 @@
 /*
- * Copyright (C) 2012 Efreak.
+ * Copyright (C) 2010 Efreak.
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License version 2 as published
- * by the Free Software Foundation.
+ * by the Free Software Foundation. 
+ * 
+ * I've aligned the version number with the version of ZNC it was last fixed
+ * to work with. If any other changes are made, update the version number to
+ * reflect it, please. This makes things easier for me; If someone else wants
+ * to take over maintenance, you're welcome to do so.
+ * -Efreak
  */
 
 #include "User.h"
@@ -177,4 +183,4 @@ private:
 
 };
 
-GLOBALMODULEDEFS(CWhois, "Whois BNC users, with extra info for admin. Version 2.0.")
+GLOBALMODULEDEFS(CWhois, "Whois BNC users, with extra info for admin. Version 0.202")
