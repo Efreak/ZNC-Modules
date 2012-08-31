@@ -11,7 +11,7 @@ I wrote the original versions of these modules\*, and I maintain them\*\* (sorta
 ## My Projects
 
 ### Whois
-This global module catches whois commands sent to the server. If the username begins with a ? (i.e. ?efreak), it shows varying amounts of information, depending on the settings and whether or not you are an admin. This module by default sends numerics, to be compatible with existing scripts that use whois.
+This global module provides whois functionality for the partyline.
 
 ### Broadcast
 This global module provides the same functionality as the broadcast command (it sends a notice to all the users), but with a standard prefix.
