@@ -1,9 +1,15 @@
 /*
- * Copyright (C) 2012 Efreak
+ * Copyright (C) 2010 Efreak.
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License version 2 as published
- * by the Free Software Foundation.
+ * by the Free Software Foundation. 
+ * 
+ * If any other changes are made, update the version number to the latest ZNC
+ * version to reflect it, please. This makes things easier to know what
+ * version it works with; If you want to contribute code, let me know via IRC
+ * and I'll ad you as a contributor on GitHub.
+ * -Efreak
  */
 
 #include "znc.h"
@@ -34,4 +40,4 @@ private:
         }
 
 };
-GLOBALMODULEDEFS(CKillNoticeMod, "Sends admins a notice when a user gets killed")
+GLOBALMODULEDEFS(CKillNoticeMod, "Sends admins a notice when a user gets killed. Version 0.01")
