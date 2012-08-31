@@ -1,12 +1,15 @@
 /*
- * Copyright (C) 2012  See the AUTHORS file for details.
+ * Copyright (C) 2010 Efreak.
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License version 2 as published
- * by the Free Software Foundation.
- *
- * This module mostly coded by Efreak, with the class definition & lastseen code
- * borrowed from lastseen & modified, and the rehash borrowed from ClientCommands & modified.
+ * by the Free Software Foundation. 
+ * 
+ * If any other changes are made, update the version number to the latest ZNC
+ * version to reflect it, please. This makes things easier to know what
+ * version it works with; If you want to contribute code, let me know via IRC
+ * and I'll ad you as a contributor on GitHub.
+ * -Efreak
  */
 
 
@@ -54,7 +57,8 @@ public:
 			PutModule("      message. Prefix defaults to 'ZNC Global Message: ', and can be changed by the arguments.");
 //			PutModule("ToDo: allow this module to override znc's dns resolution to deny users access to specific servers (can this be done?")
 //			PutModule("1.0 - initial version");
-			PutModule("2.0 - changed around resolve code to fix a crashing error when host doesnt resolve");
+//			PutModule("2.0 - changed around resolve code to fix a crashing error when host doesnt resolve");
+			PutModule("0.01 - changed version number to a different scheme");
 		}
 	}
    
@@ -63,4 +67,4 @@ protected:
 private:
 };
 
-GLOBALMODULEDEFS(CDNSMod, "DNS Resolver.");
+GLOBALMODULEDEFS(CDNSMod, "DNS Resolver. Version 0.01");
