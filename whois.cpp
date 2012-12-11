@@ -12,13 +12,13 @@
  * -Efreak
  */
 
-#include "User.h"
-#include "IRCSock.h"
-#include "znc.h"
+#include <znc/User.h>
+#include <znc/IRCSock.h>
+#include <znc/znc.h>
 
-class CWhois : public CGlobalModule {
+class CWhois : public CModule {
 public:
-	GLOBALMODCONSTRUCTOR(CWhois) {
+	MODCONSTRUCTOR(CWhois) {
 		m_bDev = false;
 		m_bReqAdmin = false;
 		m_bNumerics = true;
@@ -113,7 +113,7 @@ private:
 		CString sAwayMsg = GetNV("Away"+pUser->GetUserName());
 		if(sAwayMsg != "") sAwayMsg = ": "+sAwayMsg;
 
-		vector<CClient*>& vClients = pUser->GetClients();
+		vector<CClient*>& vClients = pUser->GetUserClients();
 		if (!vClients.empty()) {
 			 for (unsigned int a = 0; a < vClients.size(); a++) {
 				total++;
@@ -182,5 +182,10 @@ private:
 	}
 
 };
+template<> void TModInfo<CWhois>(CModInfo& Info) {
+	Info.SetWikiPage("whois");
+	Info.SetHasArgs(true);
+	Info.SetArgsHelpText("There are no arguments.");
+}
 
 GLOBALMODULEDEFS(CWhois, "Whois BNC users, with extra info for admin. Version 0.202")
