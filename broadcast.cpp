@@ -14,14 +14,16 @@
 
 
 
-#include "znc.h"
-#include "User.h"
+#include "znc/znc.h"
+#include "znc/User.h"
 
 using std::map;
 
-class CBroadcastMod : public CGlobalModule {
+class CBroadcastMod : public CModule {
 public:
-	GLOBALMODCONSTRUCTOR(CBroadcastMod) {}
+	MODCONSTRUCTOR(CBroadcastMod) 
+    {
+    }
    
 	virtual ~CBroadcastMod() {}
    
@@ -72,4 +74,4 @@ private:
 	CString bcprefix;
 };
 
-GLOBALMODULEDEFS(CBroadcastMod, "Broadcast with a prefix. Version 0.01");
+GLOBALMODULEDEFS(CBroadcastMod, "Broadcast with a prefix. Version 1.0");

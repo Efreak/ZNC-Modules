@@ -12,13 +12,13 @@
  * -Efreak
  */
 
-#include "znc.h"
-#include "User.h"
-#include "Modules.h"
+#include "znc/znc.h"
+#include "znc/User.h"
+#include "znc/Modules.h"
 
-class CKillNoticeMod : public CGlobalModule {
+class CKillNoticeMod : public CModule {
 public:
-        GLOBALMODCONSTRUCTOR(CKillNoticeMod) {}
+        MODCONSTRUCTOR(CKillNoticeMod) {}
 
         EModRet OnRaw(CString& sLine) {
                 CString sCmd = sLine.Token(0).AsUpper();
@@ -40,4 +40,4 @@ private:
         }
 
 };
-GLOBALMODULEDEFS(CKillNoticeMod, "Sends admins a notice when a user gets killed. Version 0.01")
+GLOBALMODULEDEFS(CKillNoticeMod, "Sends admins a notice when a user gets killed. Version 1.0")

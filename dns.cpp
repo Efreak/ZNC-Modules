@@ -15,9 +15,9 @@
 
 
 
-#include "User.h"
-#include "IRCSock.h"
-#include "znc.h"
+#include "znc/User.h"
+#include "znc/IRCSock.h"
+#include "znc/znc.h"
 #include <stdio.h>
 #include <netdb.h>
 #include <sys/types.h>
@@ -26,9 +26,9 @@
 
 using std::map;
 
-class CDNSMod : public CGlobalModule {
+class CDNSMod : public CModule {
 public:
-	GLOBALMODCONSTRUCTOR(CDNSMod) {}
+	MODCONSTRUCTOR(CDNSMod) {}
    
 	virtual ~CDNSMod() {}
    
@@ -67,4 +67,4 @@ protected:
 private:
 };
 
-GLOBALMODULEDEFS(CDNSMod, "DNS Resolver. Version 0.01");
+GLOBALMODULEDEFS(CDNSMod, "DNS Resolver. Version 1.0");
