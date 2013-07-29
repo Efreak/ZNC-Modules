@@ -12,9 +12,9 @@
  * -Efreak
  */
 
-#include "Chan.h"
-#include "User.h"
-#include "Modules.h"
+#include "znc/Chan.h"
+#include "znc/User.h"
+#include "znc/Modules.h"
 
 class CQuitAway : public CModule {
 public:
@@ -43,7 +43,7 @@ public:
 	}
 };
 
-MODULEDEFS(CQuitAway, "Set away message on quit (from quit message). Version 0.01")
+MODULEDEFS(CQuitAway, "Set away message on quit (from quit message). Version 1.0")
 
 /*
 on modulecall user raw {
